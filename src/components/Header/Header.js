@@ -1,6 +1,7 @@
 import React from "react";
 import {AppBar, Toolbar, makeStyles, Box, Typography, withStyles} from '@material-ui/core';
 import SearchBar from "./SearchBar";
+import HeaderButton from "./HeaderButton";
 
 
 const useStyle = makeStyles(theme => ({
@@ -53,6 +54,7 @@ function Header() {
                 </Box>
             </Box>
             <SearchBar/>
+            <HeaderButton/>
         </ToolBar>
       </AppBar>
       <Toolbar />
