@@ -1,5 +1,7 @@
 import React from "react";
-import {AppBar, Toolbar, makeStyles, Box, Typography} from '@material-ui/core';
+import {AppBar, Toolbar, makeStyles, Box, Typography, withStyles} from '@material-ui/core';
+import SearchBar from "./SearchBar";
+
 
 const useStyle = makeStyles(theme => ({
     header:{
@@ -27,6 +29,12 @@ const useStyle = makeStyles(theme => ({
     }
 }));
 
+const ToolBar = withStyles({ //to override pre written css use withstyles
+    root: {
+      minHeight: 55
+    },
+})(Toolbar);
+
 // Use box as div and Typography Heading
 function Header() {
     const classes = useStyle(); //To use css first call it
@@ -36,7 +44,7 @@ function Header() {
   return (
     <>
       <AppBar position="fixed" className={classes.header}>
-        <Toolbar>
+        <ToolBar>
             <Box className={classes.component}>
                 <img src={logoURL} className={classes.logo} />
                 <Box component="span" className={classes.container}>
@@ -44,7 +52,8 @@ function Header() {
                     <img src={subURL} className={classes.subURL} />
                 </Box>
             </Box>
-        </Toolbar>
+            <SearchBar/>
+        </ToolBar>
       </AppBar>
       <Toolbar />
     </>
