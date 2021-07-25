@@ -8,21 +8,16 @@ const useStyle = makeStyles(theme => ({
         display: 'flex',
     },
     wrapper: {
-        margin: '0 5% 0 auto', 
+        margin: '0 5% 0 auto', //margin left auto will set the data in rigtmost side
         display: 'flex',    
         '& > *': {
             marginRight: 50,
             textDecoration: 'none',
             color: '#FFFFFF',
-            fontSize: 12,
             alignItems: 'center',
             fontSize: 15,
             fontWeight: 600,
-
         },
-        [theme.breakpoints.down('sm')]: {
-            display: 'block'
-        }   
     },
     login: {
         color: '#2874f0',
@@ -46,11 +41,10 @@ function HeaderButton() {
                 <Button className={classes.login} variant="contained">Login</Button>
                 <Typography style={{ marginTop: 5 }}>More</Typography>
                 <Box className={classes.container}>
-                <Badge badgeContent={1} color="secondary">
-                    <ShoppingCart />
-                </Badge>
-                <Typography style={{ marginLeft: 10 }}>Cart</Typography>
-
+                    <Badge badgeContent={1} color="secondary">
+                        <ShoppingCart />
+                    </Badge>
+                    <Typography style={{ marginLeft: 10 }}>Cart</Typography>
                 </Box>
             </Box>
         </>
