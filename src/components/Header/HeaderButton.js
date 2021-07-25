@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles, Box, Typography, Badge, Button } from '@material-ui/core';
 import { ShoppingCart } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
 
 
 const useStyle = makeStyles(theme => ({
@@ -38,14 +39,16 @@ function HeaderButton() {
     return (
         <>
             <Box className={classes.wrapper}>
-                <Button className={classes.login} variant="contained">Login</Button>
+                <Link>
+                    <Button className={classes.login} variant="contained">Login</Button>
+                </Link>
                 <Typography style={{ marginTop: 5 }}>More</Typography>
-                <Box className={classes.container}>
+                <Link to='/cart' className={classes.container}>
                     <Badge badgeContent={1} color="secondary">
                         <ShoppingCart />
                     </Badge>
                     <Typography style={{ marginLeft: 10 }}>Cart</Typography>
-                </Box>
+                </Link>
             </Box>
         </>
     )
