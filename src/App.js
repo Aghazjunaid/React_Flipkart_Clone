@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route} from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import Home from "./components/Home"
 // import Cart from "./components/Cart"
@@ -7,9 +7,12 @@ import Home from "./components/Home"
 function App() {
   return (
     <Router>
-     <Route path="/" exact component={Home} />
-     {/* <Route path="/cart" exact component={Cart} />
-     <Route path="/details/:id" exact component={Details} /> */}
+      <Switch>
+        <Route path="/" exact component={Home} />
+        {/* <Route path="/cart" exact component={Cart} />
+        <Route path="/details/:id" exact component={Details} /> */}
+
+      </Switch>
     </Router>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import {AppBar, Toolbar, makeStyles, Box, Typography, withStyles} from '@material-ui/core';
 import SearchBar from "./SearchBar";
 import HeaderButton from "./HeaderButton";
+import { Link } from 'react-router-dom';
 
 
 const useStyle = makeStyles(theme => ({
@@ -46,13 +47,13 @@ function Header() {
     <>
       <AppBar position="fixed" className={classes.header}>
         <ToolBar>
-            <Box className={classes.component}>
+            <Link to='/' className={classes.component}>
                 <img src={logoURL} className={classes.logo} />
                 <Box component="span" className={classes.container}>
                     <Typography className = {classes.subHeading}>Explore <Box component="span" style={{color:'#FFE500'}}>Plus</Box></Typography>
                     <img src={subURL} className={classes.subURL} />
                 </Box>
-            </Box>
+            </Link>
             <SearchBar/>
             <HeaderButton/>
         </ToolBar>
