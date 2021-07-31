@@ -32,6 +32,11 @@ const useStyle = makeStyles(theme => ({
         backgroundColor: '#FFFFFF',
         padding: 5,
         margin: "0 0 0 10px"
+    },
+    component:{
+        padding:10,
+        backgroundColor: "#F2F2F2"
+
     }
 
 }));
@@ -53,7 +58,13 @@ function Home() {
                     <img src={adURL} className={classes.image} />
                 </Box>
             </Box>
-            <Multi_carousel/>
+            <Box className={classes.component}>
+                <Multi_carousel/>
+            </Box>
+            <Box className={classes.component}>
+                <Multi_carousel/>
+            </Box>
+
         </>
     )
 }
