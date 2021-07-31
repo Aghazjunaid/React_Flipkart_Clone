@@ -34,8 +34,7 @@ function Navbar() {
                     <Box className={classes.container}>
                     <img src={data.url} className={classes.image} />
                     <Typography className={classes.text}>{data.text}</Typography>
-                </Box>
-
+                    </Box>
                 ))
             }
 
