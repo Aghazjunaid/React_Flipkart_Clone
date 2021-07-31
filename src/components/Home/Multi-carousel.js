@@ -21,13 +21,11 @@ const responsive = {
 
 const useStyle = makeStyles(theme => ({
     container: {
-        marginTop: 12,
         background: '#FFFFFF'
     }, 
     wrapper:{
         display:"flex",
         padding: '15px 20px'
-
     },
     button:{
         marginLeft: 'auto',
@@ -52,7 +50,6 @@ const useStyle = makeStyles(theme => ({
         fontSize: 14,
         marginTop: 5
     },
-
 }));
 
   
