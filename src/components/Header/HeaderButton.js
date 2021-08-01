@@ -10,27 +10,46 @@ const useStyle = makeStyles(theme => ({
         display: 'flex',
     },
     wrapper: {
-        margin: '0 5% 0 auto', //margin left auto will set the data in rigtmost side
+        margin: '0 5% 0 auto', 
         display: 'flex',    
         '& > *': {
             marginRight: 50,
             textDecoration: 'none',
             color: '#FFFFFF',
+            fontSize: 12,
             alignItems: 'center',
-            fontSize: 15,
-            fontWeight: 600,
+            [theme.breakpoints.down('sm')]: {
+                color: '#2874f0',
+                alignItems: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                marginTop: 10,
+                margin:2
+            }      
         },
+        [theme.breakpoints.down('sm')]: {
+            display: 'block'
+        }   
     },
     login: {
         color: '#2874f0',
         background: '#FFFFFF',
         textTransform: 'none',
-        fontWeight: 700,
-        fontSize: 15,
+        fontWeight: 600,
         borderRadius: 2,
         padding: '5px 40px',
         height: 32,
         boxShadow: 'none',
+        [theme.breakpoints.down('sm')]: {
+            background: '#2874f0',
+            color: '#FFFFFF'
+        }   
+    },
+    more:{
+        [theme.breakpoints.down('sm')]: {
+            fontWeight: 600,
+            fontSize:15
+        }   
     }
 }));
 
@@ -48,7 +67,7 @@ function HeaderButton() {
                 <Link>
                     <Button className={classes.login} onClick={()=> openDialog()} variant="contained">Login</Button>
                 </Link>
-                <Typography style={{ marginTop: 5 }}>More</Typography>
+                <Typography style={{ marginTop: 5 }} className={classes.more}>More</Typography>
                 <Link to='/cart' className={classes.container}>
                     <Badge badgeContent={1} color="secondary">
                         <ShoppingCart />
