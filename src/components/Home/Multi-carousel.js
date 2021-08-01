@@ -83,7 +83,7 @@ function Multi_carousel() {
                 {
                     products.map(data =>(
                         <Box className={classes.boxdata}>
-                        <img src={data.url} className={classes.image} />
+                        <img src={data.url} className={classes.image} alt="aj"/>
                         <Typography className={classes.text} style={{ fontWeight: 600, color: '#212121' }}>{data.title.shortTitle}</Typography>
                         <Typography className={classes.text} style={{ color: 'green' }}>{data.discount}</Typography>
                         <Typography className={classes.text} style={{ color: '#212121', opacity: '.6' }}>{data.tagline}</Typography>

@@ -5,6 +5,7 @@ import {navData} from '../../data';
 
 const useStyle = makeStyles(theme => ({
     nav:{
+        marginTop: 55,
         display:"flex",
         justifyContent: "space-between",
         margin: "0px 130px",
@@ -36,7 +37,7 @@ function Navbar() {
             {
                 navData.map(data=> (
                     <Box className={classes.container}>
-                    <img src={data.url} className={classes.image} />
+                    <img src={data.url} className={classes.image} alt="aj"/>
                     <Typography className={classes.text}>{data.text}</Typography>
                     </Box>
                 ))

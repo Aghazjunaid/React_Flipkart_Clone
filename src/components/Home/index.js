@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../Header/Header'
 import Carousell from './carousel'
 import Navbar from './Navbar'
-import Multi_carousel from './Multi-carousel'
+import MultiCarousel from './Multi-carousel'
 import { makeStyles,Box } from '@material-ui/core'
 
 const useStyle = makeStyles(theme => ({
@@ -61,17 +61,17 @@ function Home() {
             <Carousell/>
             <Box className={classes.wrapper}>
                 <Box className={classes.leftWrapper}>
-                    <Multi_carousel/>
+                    <MultiCarousel/>
                 </Box>
                 <Box className={classes.rightWrapper}>
-                    <img src={adURL} className={classes.image} />
+                    <img src={adURL} className={classes.image} alt="aj"/>
                 </Box>
             </Box>
             <Box className={classes.component}>
-                <Multi_carousel/>
+                <MultiCarousel/>
             </Box>
             <Box className={classes.component}>
-                <Multi_carousel/>
+                <MultiCarousel/>
             </Box>
 
         </>

@@ -41,7 +41,7 @@ const Carousell = () => {
         >
             {
                 bannerData.map(image => (
-                    <img src={image} className={classes.image} />
+                    <img src={image} className={classes.image} alt="aj"/>
                 ))
             }
         </Carousel>
