@@ -7,7 +7,11 @@ const useStyle = makeStyles(theme => ({
     nav:{
         display:"flex",
         justifyContent: "space-between",
-        margin: "0px 130px"
+        margin: "0px 130px",
+        overflowX: 'overlay',
+        [theme.breakpoints.down('md')]: {
+            margin: 0
+        }
     },
     container:{
         textAlign: "center"

@@ -15,7 +15,7 @@ const useStyle = makeStyles(theme => ({
         textAlign: "center",
     },
     image: {
-        width: 245,
+        width: 230,
     },
     text: {
         fontSize: 14,
@@ -31,12 +31,21 @@ const useStyle = makeStyles(theme => ({
     rightWrapper:{
         backgroundColor: '#FFFFFF',
         padding: 5,
-        margin: "0 0 0 10px"
+        margin: "0 0 0 10px",
+        [theme.breakpoints.down('sm')]: {
+            display: 'none'
+        }
     },
     component:{
         padding:10,
         backgroundColor: "#F2F2F2"
 
+    },
+    leftWrapper:{
+        width: "83%",
+        [theme.breakpoints.down('sm')]: {
+            width: "100%"
+        }
     }
 
 }));
@@ -51,7 +60,7 @@ function Home() {
             <Navbar/>
             <Carousell/>
             <Box className={classes.wrapper}>
-                <Box style={{width:"83%"}}>
+                <Box className={classes.leftWrapper}>
                     <Multi_carousel/>
                 </Box>
                 <Box className={classes.rightWrapper}>
