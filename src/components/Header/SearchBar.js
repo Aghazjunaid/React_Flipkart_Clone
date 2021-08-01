@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, fade, InputBase, List, ListItem } from '@material-ui/core';
+import { makeStyles, InputBase } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 
 
